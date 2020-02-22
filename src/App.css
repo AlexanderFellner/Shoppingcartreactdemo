@@ -46,3 +46,23 @@ nav {
     align-items: center;
     justify-content: center;
 }
+.content{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color: greenyellow;
+    min-height:'200px';
+
+}
+.contentabout{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color: red;
+    min-height:'200px';
+
+}
+
+.productsul{
+    list-style-type: none;
+}
