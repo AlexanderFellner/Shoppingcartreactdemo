@@ -5,11 +5,11 @@ import '../App.css'
 
 
 export const Products = () => {
-        const [products, setProducts] = useContext(ShoppingContext)
+        const [{products,cart}] = useContext(ShoppingContext)
         console.log(products)
-return(<div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'blue',color:'white',height:'80px',paddingTop:'20px'}}><table >
-        {products.map((product)=><div><tr>
-                <Link style={{color:'white'}} to={`/product/${product.id}`}><td>Title: {product.title}</td></Link></tr>
-                <br/></div>)}
-       </table></div>);
+return(<div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'blue',color:'white',height:'10%px',paddingTop:'20px',paddingBottom:'20px'}}><table ><tbody>
+        {cart.map((product)=><tr key={product.id+Math.random(1,1000)}><td key={product.id+Math.random(1,1000)}>
+                <Link key={product.id+Math.random(1,1000)} style={{color:'white'}} to={`/product/${product.id}`}>Title: {product.title}</Link></td></tr>
+                )}
+      </tbody></table></div>);
 }

@@ -5,6 +5,7 @@ import {About} from './About'
 import {Home} from './Home'
 import {Products} from './Products'
 import {Product} from './Product'
+import {ProductForm} from './ProductForm'
 
 import { Nav } from './Nav'
 
@@ -28,7 +29,8 @@ class App extends React.Component {
                 <Route path="/" exact  component={Home}/>      
                 <Route path="/about"  component={About}/>     
                 <Route path="/products" component={Products}/>   
-                <Route path="/product/:id" component={Product}/>    
+                <Route path="/product/:id"  component={Product}/> 
+                <Route path="/productform" component={ProductForm}/>   
             </Switch>
             </BrowserRouter>
             </ShoppingCartProvider></div> )

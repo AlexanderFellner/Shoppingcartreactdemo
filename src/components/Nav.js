@@ -1,4 +1,4 @@
-import React, { Component, useContext } from 'react'
+import React, { Component} from 'react'
 import {Link} from 'react-router-dom'
 import { ShoppingContext } from '../context/shoppingcartcontext'
 
@@ -15,10 +15,11 @@ export const Nav = () => {
                 color:'white'
             }
         }
-        const [products, setProducts] = useContext(ShoppingContext)
+       
         return ( <div style={styles.nav}>
                <Link to="/">Home</Link>
                <Link to="/about">About</Link>
-               <Link to="/products">Products</Link>
+               <Link to="/products">Shoppingcart</Link>
+               <Link to="/productform">Productform</Link>
         </div> );
         }
