@@ -20,6 +20,7 @@ export const Nav = () => {
                <Link to="/">Home</Link>
                <Link to="/about">About</Link>
                <Link to="/products">Shoppingcart</Link>
-               <Link to="/productform">Productform</Link>
+               <Link to="/productaddform">Productaddform</Link>
+               <Link to="/productsearchform">Productsearchform</Link>
         </div> );
         }
