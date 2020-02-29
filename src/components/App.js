@@ -3,7 +3,7 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import { ShoppingCartProvider } from '../context/shoppingcartcontext'
 import {About} from './About'
 import {Home} from './Home'
-import {Products} from './Cart'
+import {Cart} from './Cart'
 import {Product} from './Product'
 import {ProductForm} from './ProductForm'
 import {ProductSearchForm} from './ProductSearchForm'
@@ -29,7 +29,7 @@ class App extends React.Component {
             <Switch>
                 <Route path="/" exact  component={Home}/>      
                 <Route path="/about"  component={About}/>     
-                <Route path="/products" component={Products}/>   
+                <Route path="/cart" component={Cart}/>   
                 <Route path="/product/:id"  component={Product}/> 
                 <Route path="/productaddform" component={ProductForm}/>   
                 <Route path="/productsearchform" component={ProductSearchForm}/>  

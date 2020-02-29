@@ -19,7 +19,7 @@ export const Nav = () => {
         return ( <div style={styles.nav}>
                <Link to="/">Home</Link>
                <Link to="/about">About</Link>
-               <Link to="/products">Shoppingcart</Link>
+               <Link to="/cart">Shoppingcart</Link>
                <Link to="/productaddform">Productaddform</Link>
                <Link to="/productsearchform">Productsearchform</Link>
         </div> );

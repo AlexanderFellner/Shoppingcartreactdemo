@@ -3,14 +3,15 @@ import { ShoppingContext } from '../context/shoppingcartcontext'
 
 export const ProductForm=()=>{
     const [{products,cart},setProductsCartList] = useContext(ShoppingContext)
-    const [id,setId]=useState()
+  
     const [title,setTitle]=useState('')
     const [price,setPrice]=useState(0)
+    const [cartupdated,setCartUpdated]=useState(false)
     const addProduct=(event)=>{
         event.preventDefault()
         let id=1
-        if(products.length>=1){
-           const lastproduct=products[products.length-1];
+        if(cart.length>=1){
+           const lastproduct=cart[cart.length-1];
            id=lastproduct.id
            id++
         }
@@ -23,11 +24,10 @@ export const ProductForm=()=>{
                 cart.push(product)
                // console.log(cart)
                 setProductsCartList({products,cart})
+                setCartUpdated(true)
                // console.log(products)
             }
         }
-       
-
     }
     const onChange=(event)=>{
         const {name,value}=event.target
@@ -51,7 +51,12 @@ export const ProductForm=()=>{
               <div>
               <input type="submit" className="btn btn-primary"   value="AddProduct"/>
               </div>
+              <div style={{marginTop:'10px'}}>
+               <p style={{color:'red',fontSize:'20'}}> {cartupdated==true? 'Your Shoppingcart has been updated':''} </p>
+              </div>
             </form>
+            
+           
         </div>
     )
 }
